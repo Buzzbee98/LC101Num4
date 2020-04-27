@@ -1,1 +1,98 @@
-<p>Corwin Buzzard</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pull Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="page1">
+        <!-- <p id="brand">Buzzard</p> -->
+        <h1>Pull Up Form</h1>
+        <a href="https://www.youtube.com/watch?v=eGo4IYlbE5g">Source</a>
+        <p>The most important part of doing a pull up is grabbing the bar. So stop wasting time and grab it.</p>
+        <button onclick="increasePage()"><img id="bar" src="./res/images/bar.png"></button>
+    </header>
+    <main>
+        
+            <!-- <h2>Form</h2> -->
+            <article id="page2">
+                <button onclick="decreasePage()">^</button>
+                <h2>Shoulders Down and Back</h2>
+                <p>Before you start pulling you should ensure that your shoulders are down and pulled back. This helps engage the muscles in your back, ensure you are working the correct muscles in your shoulders and chest, as well as help prevent injury. You should ensure that you maintain this shoulder position and tension all the way up and down.</p>
+                <img src="./res/images/shoulders.png">
+                <button onclick="increasePage()" class="next">...</button>
+            </article>
+            <article id="page3">
+                <button onclick="decreasePage()">^</button>
+                <h2>Full Extension</h2>
+                <p>Full extension is key to a quality pull up. Working out isn't about cheating so it does no one any good to cheat reps. Ensure that your arms are straight when you are at the bottom of the pull up and your chest touches the bar at the top. Getting a full range of motion in your pull up will not only make you stronger but will also prepare you for more difficult pull up variations in the future.</p>
+                <img src="./res/images/extension.png">
+                <button onclick="increasePage()" class="next">...</button>
+            </article>
+        
+        
+            <article id="page4">
+                <button onclick="decreasePage()">^</button>
+                <h2>Wide Grip</h2>
+                <p>A wide grip is probably the most standard pull up grip. When you are doing a wide grip you want to make sure you don't go too wide because you will put unnecessary strain on your elbows.  When doing a wide grip you should aim for a little wider shoulder width. The wide grip variation has the advantage of working your lats harder.</p>
+                <img src="./res/images/wide.png">
+                <button onclick="increasePage()" class="next">...</button>
+            </article>
+            <article id="page5">
+                <button onclick="decreasePage()">^</button>
+                <h2>Close Grip</h2>
+                <p>The close grip pull up is a great variation of the pull up. As with all pull up variations you get a large and dynamic muscle workout. When doing close grip you can have them as close together as you would like depending on the muscles you are trying to focus on. This Exercise will work your lower lats and pecs harder.</p>
+                <img src="./res/images/close.png">
+                <button onclick="increasePage()" class="next">...</button>
+            </article>
+       
+       
+            <article id="page6">
+                <button onclick="decreasePage()">^</button>
+                <h2>Arched Back</h2>
+                <p>Though body position primarily comes down to preference, there are some major differences. Having your back arched allows for a focus of muscles. Because you are not attempting to offset your center of gravity you put more weight on the muscles you are trying to workout.</p>
+                <img src="./res/images/arched.png">
+                <button onclick="increasePage()" class="next">...</button>
+            </article>
+            <article id="page7">
+                <button onclick="decreasePage()">^</button>
+                <h2>Straight Back</h2>
+                <p>Straight back pull ups are an extremely good exercise that have multiple advantages. Having your back straight will require you to extend your legs forward and tighten your butt which will work your core as well as several other muscles. Though position is mostly preference it is good to change up your position occasionally in order to work new muscles.</p>
+                <img src="./res/images/straight.png">
+                <button onclick="increasePage()" class="next">Back to top</button>
+            </article>
+       
+    </main>
+    <footer>
+        <p>&ltBuzzard&gt</p>
+    </footer>
+</body>
+</html>
+<script>
+    let page = 0;
+    let pages = [
+        document.getElementById("page1"),
+        document.getElementById("page2"),
+        document.getElementById("page3"),
+        document.getElementById("page4"),
+        document.getElementById("page5"),
+        document.getElementById("page6"),
+        document.getElementById("page7"),
+    ];
+    pages[page].scrollIntoView();
+    function increasePage() {
+        page++;
+        if (page > pages.length - 1 || page < 0) {
+            page = 0;
+        }
+        pages[page].scrollIntoView();
+    }
+
+    function decreasePage() {
+        page--;
+        pages[page].scrollIntoView();
+    }
+
+</script>
